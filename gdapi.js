@@ -5,15 +5,15 @@ window.onLoad = function() {
     });
 
     AMap.plugin('AMap.Geolocation', function() {
-      // var driving = new AMap.Driving({
-      //   map: map,
-      //   panel: 'panel',
-      //   policy: AMap.DrivingPolicy.LEAST_TIME,
-      //   showTraffic: true
-      // });
-      // driving.search()
+      var driving = new AMap.Driving({
+        map: map,
+        panel: 'panel',
+        policy: AMap.DrivingPolicy.LEAST_TIME,
+        showTraffic: true
+      });
+      driving.search()
 
-      var geolocation = new Amap.Geolocation({
+      var geolocation = new AMap.Geolocation({
         enableHighAccuracy: true, //是否使用高精度定位，默认:true
         timeout: 1000, //超过10秒后停止定位，默认：5s
         buttonPosition: 'RB', //定位按钮的停靠位置
