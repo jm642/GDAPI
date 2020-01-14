@@ -4,7 +4,7 @@ window.onLoad = function() {
       zoom: 12
     });
 
-    AMap.plugin('AMap.Geolocation', function() {
+    AMap.plugin(['AMap.Driving','AMap.Geolocation'], function() {
       var driving = new AMap.Driving({
         map: map,
         panel: 'panel',
